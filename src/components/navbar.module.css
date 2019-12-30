@@ -1,0 +1,8 @@
+.navbar {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navbar-element {
+    display: inline;
+}

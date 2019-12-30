@@ -1,5 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+
+import Emoji from "a11y-react-emoji"
+
 import Header from "../components/header"
 import styles from "../components/about-css-modules.module.css"
 import Container from "../components/container"
@@ -18,12 +21,20 @@ const User = props => {
     )
 }
 
+const SmileyShades = () => {
+    return (
+        <Emoji symbol="😎" label="smiley with shades" />
+    )
+}
+
 export default () => {
     return (
         <Container>
-            <Link to="/">Home</Link>
+            <div style={{ margin: "0 auto", textAlign: "center"}}>
+                <Link className="button" to="/">Home</Link>
+            </div>
             <Header headerText="About CSS Modules" />
-            <p>😎 CSS Modules are cool! 😎</p>
+            <p><SmileyShades/> CSS Modules are cool! <SmileyShades/></p>
             <User
                 username="Jane Doe"
                 avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"

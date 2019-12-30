@@ -1,11 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import Header from "../components/header"
+import Container from "../components/container"
 
 export default () => {
     return (
-        <div>
-            <Link to="/">Home</Link>
+        <Container>
+            <div style={{ margin: "0 auto", textAlign: "center"}}>
+                <Link className="button" to="/">Home</Link>
+            </div>
             <Header headerText="(=^･ω･^)y＝" />
             <h2>
                 こんにちは、ガツビ！！！
@@ -16,7 +19,7 @@ export default () => {
                 あー、そう？
             </p>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/BcyYQXTHIV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+            <iframe title="cute otter" width="560" height="315" src="https://www.youtube.com/embed/BcyYQXTHIV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </Container>
     )
 }
